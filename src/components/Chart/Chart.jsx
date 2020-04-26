@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchDailyData } from "../../api";
 import { Line, Bar } from "react-chartjs-2";
 import styles from "./Chart.module.css";
+import { CircularProgress } from "@material-ui/core";
 const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState([]);
 
@@ -34,7 +35,9 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         ]
       }}
     />
-  ) : null;
+  ) : (
+    <CircularProgress />
+  );
 
   const barChart = confirmed ? (
     <Bar
@@ -57,7 +60,9 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         title: { display: true, text: `${country}` }
       }}
     />
-  ) : null;
+  ) : (
+    <CircularProgress />
+  );
 
   return (
     <div className={styles.container}>{country ? barChart : lineChart}</div>
