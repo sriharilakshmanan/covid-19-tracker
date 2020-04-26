@@ -1,3 +1,14 @@
+# COVID-19 TRACKER
+
+![COVID-19 Tracker](src/assets/images/COVID-19-TRACKER.png)
+
+References:
+https://github.com/adrianhajdin/project_corona_tracker
+
+API:
+https://covid19.mathdro.id/api
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
